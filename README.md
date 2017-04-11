@@ -186,6 +186,7 @@ NOTE: nslookup ignores osx dns proxy, do not test with that
 brew install bradp/vv/vv
 ```
 _Note: when you do your first VV create below, if you do it from the ~/Sites/VVV folder it will automagically setup your .vv-config file._
+
 ## Setting Up WordPress Development
 
 Fully setting up local WordPress development of a custom site isn't that complicated, but its complex enough that we don't want to try do a comprehensive explanation in readme file. 
@@ -226,3 +227,13 @@ Unchecked SSL box
 - `git config --global user.name "John Doe"`
 - `git config --global user.email johndoe@example.com`
 - Finder-> prefs-> new finder at “choose user dir” and then setup favorites sidebar
+
+## Migrating SSH Keys
+
+When moving to a new computer, it's often helpful to migrate your SSH keys as well. These are the `id_rsa` and `id_rsa.pub` files located in `~/.ssh`. The files can simply be copied over between machines, but after copying you'll need to reset permissions on the `id_rsa` file to ensure servers will continue to accept it (copying these files can reset the read/write permissions). 
+
+To correct the permissions, run the following in terminal after you've copied the files over:
+
+```
+chmod 600 ~/.ssh/id_rsa
+```
