@@ -284,7 +284,7 @@ Paste in the following just above the utilities section of vvv-custom.yml:
 Last we need to ask VVV to build our new configuration. We can completely rebuild the entire Vagrant, or, whats faster is to ask VVV2 to just build our new site within the Vagrant. We are going to show here the more efficient way of building just our 1 new site from the config.
 
 ```
-vagrant up ; vagrant provision --provision-with site-mylocalsite.dev'
+vagrant up ; vagrant provision --provision-with site-mylocalsite.dev
 ```
 
 ### But I want VVV2 to mirror my production site
